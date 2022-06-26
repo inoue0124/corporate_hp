@@ -37,7 +37,8 @@ const WaveForm: FC<BoxProps> = (props) => {
     >
       {[...Array(21).keys()].map((i) => (
         <Box
-          h={'2%'}
+          key={i}
+          h={'3%'}
           borderRadius="2px"
           position="absolute"
           animation={animation(-i)}

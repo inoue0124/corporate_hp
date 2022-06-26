@@ -1,5 +1,6 @@
 import Ellipse from '@/components/ellipse';
 import Header from '@/components/header';
+import Mission from '@/components/mission';
 import WaveForm from '@/components/waveform';
 import {
   Box,
@@ -19,33 +20,31 @@ export default function Home() {
         <Center>
           <Header w={'1000px'} />
         </Center>
-        <main>
-          <Fade in={true}>
-            <Ellipse
-              w="484px"
-              h="655.68px"
-              position="absolute"
-              left="-100px"
-              top="-200px"
-            />
-          </Fade>
 
-          <Center as={'section'}>
-            <HStack height={'70vh'} width={'1000px'}>
+        <main>
+          <Ellipse
+            w="484px"
+            h="655.68px"
+            position="absolute"
+            left="-100px"
+            top="-200px"
+          />
+
+          <Box as={'section'}>
+            <HStack h={'70vh'} w={'1000px'} m={'auto'}>
               <Text color="grey.900" fontSize={36}>
                 ワクワクする未来を創る人材を
                 <br />
                 キャリーする
               </Text>
               <Spacer />
-              <WaveForm height={'80%'} />
+              <WaveForm h={'80%'} />
             </HStack>
-          </Center>
+            <Mission m={'auto'} />
+          </Box>
 
           <Box as={'section'} position={'relative'}>
-            <Fade in={true}>
-              <Ellipse w="250px" h="250px" />
-            </Fade>
+            <Ellipse w="250px" h="250px" />
           </Box>
         </main>
       </ChakraProvider>
