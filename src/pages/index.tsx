@@ -1,14 +1,14 @@
-import Title from '@/components/Title';
+import Header from '@/components/header';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from '../theme';
 
 export default function Home() {
   return (
-    <main>
-      <Title>Hello TypeScript!</Title>
-      <p>A TypeScript starter for Gatsby. Great for advanced users.</p>
-      <p>
-        Follow me on Twitter (
-        <a href="https://twitter.com/jpedroschmitz">@jpedroschmitz</a>)
-      </p>
-    </main>
+    <>
+      <ChakraProvider theme={theme}>
+        <Header />
+        <main></main>
+      </ChakraProvider>
+    </>
   );
 }
