@@ -1,9 +1,17 @@
-import { Box, Flex, Text, Divider, Grid, Spacer } from '@chakra-ui/layout';
+import { Flex, Text, Grid, Spacer } from '@chakra-ui/layout';
+import { BoxProps } from '@chakra-ui/react';
+import { FC } from 'react';
 import Logo from './logo';
 
-const Header = () => {
+const Header: FC<BoxProps> = (props) => {
   return (
-    <Flex color="grey.900" h={'80px'} alignItems="center" as={'header'}>
+    <Flex
+      color="grey.900"
+      h={'80px'}
+      alignItems="center"
+      as={'header'}
+      {...props}
+    >
       <Logo />
       <Spacer />
       <Grid
