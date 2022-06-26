@@ -5,7 +5,7 @@ import { FC } from 'react';
 const Mission: FC<BoxProps> = (props) => {
   return (
     <Center {...props}>
-      <Box maxW={350} mr={16}>
+      <Box maxW={400} mr={16}>
         <StaticImage
           src="../images/mission.png"
           alt="mission"

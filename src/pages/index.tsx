@@ -30,7 +30,7 @@ export default function Home() {
             top="-200px"
           />
 
-          <Box as={'section'}>
+          <Box as={'section'} pb={36}>
             <HStack h={'70vh'} w={'1000px'} m={'auto'}>
               <Text color="grey.900" fontSize={36}>
                 ワクワクする未来を創る人材を
@@ -40,11 +40,18 @@ export default function Home() {
               <Spacer />
               <WaveForm h={'80%'} />
             </HStack>
-            <Mission m={'auto'} />
+            <Mission m={'auto'} mt={10} />
           </Box>
 
-          <Box as={'section'} position={'relative'}>
-            <Ellipse w="250px" h="250px" />
+          <Box as={'section'} bg={'#F5F5F5'} py={36} position="relative">
+            <Ellipse
+              w="250px"
+              h="300px"
+              position="absolute"
+              right={100}
+              top={-20}
+              zIndex={1}
+            />
           </Box>
         </main>
       </ChakraProvider>

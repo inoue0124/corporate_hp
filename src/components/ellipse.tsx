@@ -7,13 +7,13 @@ const Ellipse: FC<BoxProps> = (props) => {
       transform: rotate(28deg) translateY(0px);
     }
     50% {
-      transform: rotate(14deg) translateY(-30px);
+      transform: rotate(8deg) translateY(-40px);
     }
     100% {
       transform: rotate(28deg) translateY(0px);
     }
   `;
-  const animation = `${updown} infinite 8s ease-in-out`;
+  const animation = `${updown} infinite 4s ease-in-out`;
 
   return (
     <>
