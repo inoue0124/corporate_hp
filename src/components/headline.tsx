@@ -1,4 +1,4 @@
-import { Box, BoxProps, Center, Text } from '@chakra-ui/react';
+import { BoxProps, Center, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 

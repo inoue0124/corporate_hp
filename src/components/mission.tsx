@@ -1,4 +1,4 @@
-import { Box, BoxProps, Center, Spacer, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Center, Text } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FC } from 'react';
 

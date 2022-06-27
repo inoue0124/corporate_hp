@@ -29,16 +29,16 @@ const WaveForm: FC<BoxProps> = (props) => {
   return (
     <HStack
       zIndex="-1"
-      w={'200px'}
-      h={'100%'}
+      w="200px"
+      h="100%"
       position="relative"
-      justify={'center'}
+      justify="center"
       {...props}
     >
       {[...Array(21).keys()].map((i) => (
         <Box
           key={i}
-          h={'3%'}
+          h="3%"
           borderRadius="2px"
           position="absolute"
           animation={animation(-i)}
