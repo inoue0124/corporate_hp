@@ -1,5 +1,6 @@
 import Ellipse from '@/components/ellipse';
 import Header from '@/components/header';
+import Headline from '@/components/headline';
 import Mission from '@/components/mission';
 import WaveForm from '@/components/waveform';
 import {
@@ -46,12 +47,13 @@ export default function Home() {
           <Box as={'section'} bg={'#F5F5F5'} py={36} position="relative">
             <Ellipse
               w="250px"
-              h="300px"
+              h="250px"
               position="absolute"
               right={100}
               top={-20}
               zIndex={1}
             />
+            <Headline title="Service"></Headline>
           </Box>
         </main>
       </ChakraProvider>
