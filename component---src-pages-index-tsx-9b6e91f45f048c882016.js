@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_ts=self.webpackChunkgatsby_starter_ts||[]).push([[691],{6854:function(t,r,e){e.r(r),e.d(r,{default:function(){return n}});var s=e(5893);function n(){return(0,s.jsxs)("main",{children:[(0,s.jsx)("p",{children:"A TypeScript starter for Gatsby. Great for advanced users."}),(0,s.jsxs)("p",{children:["Follow me on Twitter (",(0,s.jsx)("a",{href:"https://twitter.com/jpedroschmitz",children:"@jpedroschmitz"}),")"]})]})}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-9b6e91f45f048c882016.js.map
