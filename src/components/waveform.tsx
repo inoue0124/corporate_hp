@@ -9,13 +9,13 @@ const WaveForm: FC<BoxProps> = (props) => {
       background: #ADE2FF;
     }
     25% {
-      width: 150px;
+      width: 250px;
     }
     50% {
-      width: 20px;
+      width: 50px;
     }
     75% {
-      width: 200px;
+      width: 300px;
     }
     100% {
       bottom: 100%;
