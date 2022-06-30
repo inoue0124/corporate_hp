@@ -2,14 +2,13 @@ import { BoxProps, Center, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
-type Props = {
+type Props = BoxProps & {
   title: String;
-  props?: BoxProps;
 };
 
-const Headline: FC<Props> = ({ title, props }) => {
+const Headline: FC<Props> = (props) => {
   return (
-    <Center>
+    <Center {...props}>
       <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -23,9 +22,8 @@ const Headline: FC<Props> = ({ title, props }) => {
         bgClip="text"
         fontFamily="Poppins"
         fontSize={64}
-        {...props}
       >
-        {title}
+        {props.title}
       </Text>
     </Center>
   );

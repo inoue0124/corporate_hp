@@ -1,7 +1,12 @@
 import { Text } from '@chakra-ui/react';
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
-const Logo = () => {
+type Props = {
+  isWhite?: boolean;
+};
+
+const Logo: FC<Props> = ({ isWhite = false }) => {
   return (
     <>
       <Helmet>
@@ -12,7 +17,12 @@ const Logo = () => {
           rel="stylesheet"
         />
       </Helmet>
-      <Text color="grey.900" fontSize={24} fontFamily="KoHo" fontWeight="bold">
+      <Text
+        color={isWhite ? 'white' : 'grey.900'}
+        fontSize={24}
+        fontFamily="KoHo"
+        fontWeight="bold"
+      >
         Carriage inc.
       </Text>
     </>

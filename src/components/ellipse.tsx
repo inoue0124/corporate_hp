@@ -1,16 +1,26 @@
 import { Box, BoxProps, keyframes } from '@chakra-ui/react';
 import { FC } from 'react';
 
-const Ellipse: FC<BoxProps> = (props) => {
+type Props = BoxProps & {
+  isReverse: boolean;
+};
+
+const Ellipse: FC<Props> = (props) => {
   const updown = keyframes`
     0% {
-      transform: rotate(28deg) translateY(0px);
+      transform: rotate(
+        ${props.isReverse ? '-28deg' : '28deg'}
+      ) translateY(0px);
     }
     50% {
-      transform: rotate(8deg) translateY(-40px);
+      transform: rotate(
+        ${props.isReverse ? '-8deg' : '8deg'}
+      ) translateY(-40px);
     }
     100% {
-      transform: rotate(28deg) translateY(0px);
+      transform: rotate(
+        ${props.isReverse ? '-28deg' : '28deg'}
+      ) translateY(0px);
     }
   `;
   const animation = `${updown} infinite 4s ease-in-out`;
