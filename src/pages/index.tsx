@@ -16,15 +16,19 @@ import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 import Service from '@/components/service';
 import { graphql, PageProps } from 'gatsby';
+import Member from '@/components/member';
 
 const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
   const { ref: missionRef, inView: missionInView } = useInView({
     rootMargin: '-100px',
     triggerOnce: true,
   });
-
   const { ref: serviceRef, inView: serviceInView } = useInView({
-    rootMargin: '-100px',
+    rootMargin: '-300px',
+    triggerOnce: true,
+  });
+  const { ref: memberRef, inView: memberInView } = useInView({
+    rootMargin: '-200px',
     triggerOnce: true,
   });
 
@@ -118,7 +122,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
               >
                 <Headline title="Service"></Headline>
                 <Service
-                  image={data.service1?.childImageSharp?.gatsbyImageData!}
+                  image={data.shadowingSaver?.childImageSharp?.gatsbyImageData!}
                   name="Shadowing Saver"
                   description="英語のスピーキング学習手法であるシャドーイングを大学等教育機関で導入するためのLMSシステム。東京大学峯松信明教授、及び神戸学院大学中西のりこ教授と連携して開発。"
                   m="auto"
@@ -126,7 +130,58 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                 />
               </Box>
             ) : (
-              <Box> </Box>
+              <Box h="300px" />
+            )}
+          </Box>
+
+          <Box as="section" ref={memberRef} py={36}>
+            {memberInView ? (
+              <Box
+                className="animate__animated animate__fadeIn"
+                style={{ animationDelay: '0.2s' }}
+              >
+                <Headline title="Member" mb={16}></Headline>
+                <Member
+                  image={data.inoue?.childImageSharp?.gatsbyImageData!}
+                  title="代表取締役"
+                  name="井上雄介"
+                  nameEn="Yusuke Inoue"
+                  profile={
+                    <>
+                      東京大学大学院工学系研究科卒業。在学時は音声分析技術を用いた外国語学習支援に関して研究を行い国内外の学会で発表を行う。
+                      <br />
+                      卒業後はWeb系メガベンチャーに入社し、Web開発に関する幅広い知識を養う。在学時から語学学習に興味を持ち、自らも中国の清華大学に交換留学をして外国語を身につけた経験を持つ。
+                      <br />
+                      大学の研究を社会に実装し、外国語学習をより科学的にするべくキャリッジ株式会社を創業し、現在に至る。
+                    </>
+                  }
+                  isImageRight={false}
+                  m="auto"
+                  maxW="1000px"
+                  mb={16}
+                />
+                <Member
+                  image={data.mission?.childImageSharp?.gatsbyImageData!}
+                  title="取締役"
+                  name="水野宏明"
+                  nameEn="Hiroaki Mizuno"
+                  profile={
+                    <>
+                      東京大学理学部情報科学科卒業。在学時は研究と並行して、ベンチャー企業でCMSの開発に従事。
+                      <br />
+                      卒業後、独立系SIerにてコンサルタントとして就職。当時の最も売上の高かった大手企業顧客のカスタマーサクセスを担当。数万人規模の査定のペーパーレス化プロジェクトを完遂。
+                      <br />
+                      その後、井上と同じWeb系メガベンチャーに入社し、広告関連のプロダクト開発を担当。井上の理念に共感し、キャリッジを共同で創業。
+                      <br />
+                    </>
+                  }
+                  isImageRight={true}
+                  m="auto"
+                  maxW="1000px"
+                />
+              </Box>
+            ) : (
+              <Box h="300px" />
             )}
           </Box>
         </main>
@@ -146,7 +201,17 @@ export const query = graphql`
         )
       }
     }
-    service1: file(relativePath: { eq: "service/shadowing_saver.png" }) {
+    shadowingSaver: file(relativePath: { eq: "service/shadowing_saver.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          blurredOptions: { width: 100 }
+          width: 600
+          placeholder: BLURRED
+        )
+      }
+    }
+    inoue: file(relativePath: { eq: "member/inoue.png" }) {
       id
       childImageSharp {
         gatsbyImageData(
