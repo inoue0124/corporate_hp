@@ -18,7 +18,7 @@ const Logo: FC<Props> = ({ isWhite = false }) => {
         />
       </Helmet>
       <Text
-        color={isWhite ? 'white' : 'grey.900'}
+        color={isWhite ? `white` : `grey.900`}
         fontSize={24}
         fontFamily="KoHo"
         fontWeight="bold"

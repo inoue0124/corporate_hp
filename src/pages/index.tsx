@@ -21,26 +21,27 @@ import Member from '@/components/member';
 import News from '@/components/news';
 import CompanyOverview from '@/components/companyOverview';
 import Footer from '@/components/footer';
+import { FC } from 'react';
 
-const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
+const Home: FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
   const { ref: missionRef, inView: missionInView } = useInView({
-    rootMargin: '-100px',
+    rootMargin: `-100px`,
     triggerOnce: true,
   });
   const { ref: serviceRef, inView: serviceInView } = useInView({
-    rootMargin: '-300px',
+    rootMargin: `-300px`,
     triggerOnce: true,
   });
   const { ref: memberRef, inView: memberInView } = useInView({
-    rootMargin: '-200px',
+    rootMargin: `-200px`,
     triggerOnce: true,
   });
   const { ref: newsRef, inView: newsInView } = useInView({
-    rootMargin: '-300px',
+    rootMargin: `-300px`,
     triggerOnce: true,
   });
   const { ref: companyRef, inView: companyInView } = useInView({
-    rootMargin: '-200px',
+    rootMargin: `-200px`,
     triggerOnce: true,
   });
 
@@ -65,7 +66,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             <HStack h="100vh" w="1000px" m="auto">
               <Text
                 className="animate__animated animate__fadeIn"
-                style={{ animationDelay: '0.2s', animationDuration: '1s' }}
+                style={{ animationDelay: `0.2s`, animationDuration: `1s` }}
                 color="grey.900"
                 fontSize={36}
               >
@@ -82,7 +83,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             {missionInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
-                style={{ animationDelay: '0.2s' }}
+                style={{ animationDelay: `0.2s` }}
               >
                 <Headline title="Mission"></Headline>
                 <Mission
@@ -133,7 +134,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             {serviceInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
-                style={{ animationDelay: '0.2s' }}
+                style={{ animationDelay: `0.2s` }}
               >
                 <Headline title="Service"></Headline>
                 <Service
@@ -151,7 +152,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
 
           <Box id="member" as="section" ref={memberRef} py={20}>
             {memberInView ? (
-              <Box style={{ animationDelay: '0.2s' }}>
+              <Box style={{ animationDelay: `0.2s` }}>
                 <Headline title="Member" mb={16}></Headline>
                 <Member
                   className="animate__animated animate__fadeInUp"
@@ -219,13 +220,13 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             {newsInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
-                style={{ animationDelay: '0.2s' }}
+                style={{ animationDelay: `0.2s` }}
               >
                 <Headline title="News"></Headline>
                 <VStack spacing={4}>
                   <News
-                    date={'2022.07.04'}
-                    title={'キャリッジ株式会社を設立いたしました。'}
+                    date="2022.07.04"
+                    title="キャリッジ株式会社を設立いたしました。"
                   />
                 </VStack>
               </Box>
@@ -238,7 +239,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             {companyInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
-                style={{ animationDelay: '0.2s' }}
+                style={{ animationDelay: `0.2s` }}
               >
                 <Headline title="Company" mb={16}></Headline>
                 <CompanyOverview w="1000px" />

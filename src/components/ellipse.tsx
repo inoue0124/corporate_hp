@@ -9,17 +9,17 @@ const Ellipse: FC<Props> = (props) => {
   const updown = keyframes`
     0% {
       transform: rotate(
-        ${props.isReverse ? '-28deg' : '28deg'}
+        ${props.isReverse ? `-28deg` : `28deg`}
       ) translateY(0px);
     }
     50% {
       transform: rotate(
-        ${props.isReverse ? '-8deg' : '8deg'}
+        ${props.isReverse ? `-8deg` : `8deg`}
       ) translateY(-40px);
     }
     100% {
       transform: rotate(
-        ${props.isReverse ? '-28deg' : '28deg'}
+        ${props.isReverse ? `-28deg` : `28deg`}
       ) translateY(0px);
     }
   `;

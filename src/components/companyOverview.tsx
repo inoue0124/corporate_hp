@@ -2,7 +2,6 @@ import {
   BoxProps,
   Center,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,

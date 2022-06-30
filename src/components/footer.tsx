@@ -4,7 +4,7 @@ import { FC } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Logo from './logo';
 
-const Footer: FC<BoxProps> = (props) => {
+const Footer: FC<BoxProps> = () => {
   return (
     <Center
       as="footer"

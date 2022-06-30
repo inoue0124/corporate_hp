@@ -71,5 +71,9 @@
     "react": {
       "version": "detect"
     }
+  },
+  "globals" : {
+    "JSX": true,
+    "GatsbyTypes": true
   }
 }
