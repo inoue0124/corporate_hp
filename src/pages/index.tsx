@@ -38,6 +38,10 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
     rootMargin: '-300px',
     triggerOnce: true,
   });
+  const { ref: companyRef, inView: companyInView } = useInView({
+    rootMargin: '-200px',
+    triggerOnce: true,
+  });
 
   return (
     <>
@@ -145,12 +149,10 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
 
           <Box as="section" ref={memberRef} py={20}>
             {memberInView ? (
-              <Box
-                className="animate__animated animate__fadeIn"
-                style={{ animationDelay: '0.2s' }}
-              >
+              <Box style={{ animationDelay: '0.2s' }}>
                 <Headline title="Member" mb={16}></Headline>
                 <Member
+                  className="animate__animated animate__fadeInLeft"
                   image={data.inoue?.childImageSharp?.gatsbyImageData!}
                   title="代表取締役"
                   name="井上雄介"
@@ -170,6 +172,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                   mb={16}
                 />
                 <Member
+                  className="animate__animated animate__fadeInRight"
                   image={data.mission?.childImageSharp?.gatsbyImageData!}
                   title="取締役"
                   name="水野宏明"
@@ -228,8 +231,8 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             )}
           </Box>
 
-          <Box as="section" ref={memberRef} py={20}>
-            {memberInView ? (
+          <Box as="section" ref={companyRef} py={20}>
+            {companyInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
                 style={{ animationDelay: '0.2s' }}
