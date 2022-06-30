@@ -19,6 +19,7 @@ import Service from '@/components/service';
 import { graphql, PageProps } from 'gatsby';
 import Member from '@/components/member';
 import News from '@/components/news';
+import CompanyOverview from '@/components/companyOverview';
 
 const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
   const { ref: missionRef, inView: missionInView } = useInView({
@@ -221,6 +222,20 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                     title={'キャリッジ株式会社を設立いたしました。'}
                   />
                 </VStack>
+              </Box>
+            ) : (
+              <Box h="300px" />
+            )}
+          </Box>
+
+          <Box as="section" ref={memberRef} py={20}>
+            {memberInView ? (
+              <Box
+                className="animate__animated animate__fadeIn"
+                style={{ animationDelay: '0.2s' }}
+              >
+                <Headline title="Company" mb={16}></Headline>
+                <CompanyOverview w="1000px" />
               </Box>
             ) : (
               <Box h="300px" />
