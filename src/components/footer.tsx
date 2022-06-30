@@ -1,6 +1,7 @@
 import { Text, HStack, Center, Box } from '@chakra-ui/layout';
 import { BoxProps } from '@chakra-ui/react';
 import { FC } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Logo from './logo';
 
 const Footer: FC<BoxProps> = (props) => {
@@ -11,34 +12,34 @@ const Footer: FC<BoxProps> = (props) => {
       py={12}
     >
       <Box>
-        <HStack mb={4}>
+        <HStack mb={4} spacing={8}>
           <Text
             fontSize="14"
             color="white"
             _hover={{ textDecoration: `underline 1px` }}
           >
-            サービス
+            <AnchorLink href="#service">サービス</AnchorLink>
           </Text>
           <Text
             fontSize="14"
             color="white"
             _hover={{ textDecoration: `underline 1px` }}
           >
-            メンバー
+            <AnchorLink href="#member">メンバー</AnchorLink>
           </Text>
           <Text
             fontSize="14"
             color="white"
             _hover={{ textDecoration: `underline 1px` }}
           >
-            ニュース
+            <AnchorLink href="#news">ニュース</AnchorLink>
           </Text>
           <Text
             fontSize="14"
             color="white"
             _hover={{ textDecoration: `underline 1px` }}
           >
-            会社概要
+            <AnchorLink href="#company">会社概要</AnchorLink>
           </Text>
         </HStack>
         <Center>

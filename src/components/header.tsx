@@ -1,4 +1,5 @@
 import { Flex, Text, Grid, Spacer } from '@chakra-ui/layout';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { BoxProps } from '@chakra-ui/react';
 import { FC } from 'react';
 import Logo from './logo';
@@ -19,28 +20,28 @@ const Header: FC<BoxProps> = (props) => {
           as="li"
           _hover={{ textDecoration: `underline 1px` }}
         >
-          サービス
+          <AnchorLink href="#service">サービス</AnchorLink>
         </Text>
         <Text
           fontSize="sm"
           as="li"
           _hover={{ textDecoration: `underline 1px` }}
         >
-          メンバー
+          <AnchorLink href="#member">メンバー</AnchorLink>
         </Text>
         <Text
           fontSize="sm"
           as="li"
           _hover={{ textDecoration: `underline 1px` }}
         >
-          ニュース
+          <AnchorLink href="#news">ニュース</AnchorLink>
         </Text>
         <Text
           fontSize="sm"
           as="li"
           _hover={{ textDecoration: `underline 1px` }}
         >
-          会社概要
+          <AnchorLink href="#company">会社概要</AnchorLink>
         </Text>
       </Grid>
     </Flex>
