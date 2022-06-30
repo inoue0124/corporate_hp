@@ -9,7 +9,7 @@ const Header: FC<BoxProps> = (props) => {
       <Logo />
       <Spacer />
       <Grid
-        templateColumns="repeat(5, 1fr)"
+        templateColumns="repeat(4, 1fr)"
         gap={10}
         sx={{ listStyle: `none` }}
         as="nav"
@@ -41,13 +41,6 @@ const Header: FC<BoxProps> = (props) => {
           _hover={{ textDecoration: `underline 1px` }}
         >
           会社概要
-        </Text>
-        <Text
-          fontSize="sm"
-          as="li"
-          _hover={{ textDecoration: `underline 1px` }}
-        >
-          お問合せ
         </Text>
       </Grid>
     </Flex>

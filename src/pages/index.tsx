@@ -20,6 +20,7 @@ import { graphql, PageProps } from 'gatsby';
 import Member from '@/components/member';
 import News from '@/components/news';
 import CompanyOverview from '@/components/companyOverview';
+import Footer from '@/components/footer';
 
 const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
   const { ref: missionRef, inView: missionInView } = useInView({
@@ -244,6 +245,8 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
               <Box h="300px" />
             )}
           </Box>
+
+          <Footer />
         </main>
       </ChakraProvider>
     </>
