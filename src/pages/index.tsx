@@ -10,6 +10,7 @@ import {
   HStack,
   Spacer,
   Text,
+  VStack,
 } from '@chakra-ui/react';
 import theme from '../theme';
 import { useInView } from 'react-intersection-observer';
@@ -17,6 +18,7 @@ import 'animate.css';
 import Service from '@/components/service';
 import { graphql, PageProps } from 'gatsby';
 import Member from '@/components/member';
+import News from '@/components/news';
 
 const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
   const { ref: missionRef, inView: missionInView } = useInView({
@@ -31,6 +33,10 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
     rootMargin: '-200px',
     triggerOnce: true,
   });
+  const { ref: newsRef, inView: newsInView } = useInView({
+    rootMargin: '-300px',
+    triggerOnce: true,
+  });
 
   return (
     <>
@@ -41,6 +47,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
 
         <main>
           <Ellipse
+            isReverse={false}
             w="484px"
             h="655.68px"
             position="absolute"
@@ -65,7 +72,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             </HStack>
           </Box>
 
-          <Box as="section" ref={missionRef} pb={36}>
+          <Box as="section" ref={missionRef} pb={20}>
             {missionInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
@@ -104,10 +111,11 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             as="section"
             ref={serviceRef}
             bg="#F5F5F5"
-            py={36}
+            py={20}
             position="relative"
           >
             <Ellipse
+              isReverse={false}
               w="250px"
               h="250px"
               position="absolute"
@@ -134,7 +142,7 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
             )}
           </Box>
 
-          <Box as="section" ref={memberRef} py={36}>
+          <Box as="section" ref={memberRef} py={20}>
             {memberInView ? (
               <Box
                 className="animate__animated animate__fadeIn"
@@ -179,6 +187,40 @@ const Home: React.FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                   m="auto"
                   maxW="1000px"
                 />
+              </Box>
+            ) : (
+              <Box h="300px" />
+            )}
+          </Box>
+
+          <Box
+            as="section"
+            ref={newsRef}
+            bg="#F5F5F5"
+            py={20}
+            position="relative"
+          >
+            <Ellipse
+              isReverse={true}
+              w="384px"
+              h="500.68px"
+              position="absolute"
+              left="-120px"
+              top="-300px"
+              zIndex={1}
+            />
+            {newsInView ? (
+              <Box
+                className="animate__animated animate__fadeIn"
+                style={{ animationDelay: '0.2s' }}
+              >
+                <Headline title="News"></Headline>
+                <VStack spacing={4}>
+                  <News
+                    date={'2022.07.04'}
+                    title={'キャリッジ株式会社を設立いたしました。'}
+                  />
+                </VStack>
               </Box>
             ) : (
               <Box h="300px" />
