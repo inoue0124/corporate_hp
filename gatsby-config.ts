@@ -1,7 +1,8 @@
 import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
-  pathPrefix: `/public`,
+  // ローカルサーバで開く際に必要
+  // pathPrefix: `/public`,
   siteMetadata: {
     title: `キャリッジ株式会社`,
     author: {
