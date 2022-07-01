@@ -14,7 +14,6 @@ import {
 } from '@chakra-ui/react';
 import theme from '../theme';
 import { useInView } from 'react-intersection-observer';
-import 'animate.css';
 import Service from '@/components/service';
 import { graphql, PageProps } from 'gatsby';
 import Member from '@/components/member';

@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
+  pathPrefix: `/public`,
   siteMetadata: {
     title: `キャリッジ株式会社`,
     author: {
