@@ -98,10 +98,6 @@ const Home: FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                       テクノロジー志向かつデータドリブンに変えていきます。
                       アカデミックとビジネスの架け橋となり、
                       教育をテクノロジー志向かつデータドリブンに変えていきます。
-                      <br />
-                      <br />
-                      効率の良い学びの場を提供することで
-                      すべての人がポテンシャルを発揮し 時代の
                     </>
                   }
                   m="auto"
@@ -139,7 +135,7 @@ const Home: FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                 <Service
                   image={data.shadowingSaver?.childImageSharp?.gatsbyImageData!}
                   name="Shadowing Saver"
-                  description="英語のスピーキング学習手法であるシャドーイングを大学等教育機関で導入するためのLMSシステム。東京大学峯松信明教授、及び神戸学院大学中西のりこ教授と連携して開発。"
+                  description="英語のスピーキング学習手法であるシャドーイングを大学等教育機関で導入するためのLMSシステム。東京大学峯松信明教授、及び神戸学院大学中西のりこ教授と連携して開発中。"
                   m="auto"
                   mt={16}
                 />
