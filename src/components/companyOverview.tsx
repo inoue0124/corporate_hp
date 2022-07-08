@@ -43,6 +43,7 @@ const CompanyOverview: FC<BoxProps> = (props) => {
               <Td>事業内容</Td>
               <Td>
                 ラーニングマネジメントシステムの開発、販売
+                <br />
                 Webアプリケーションシステムの受託開発
               </Td>
             </Tr>

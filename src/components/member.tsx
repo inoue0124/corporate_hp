@@ -13,7 +13,12 @@ type Props = BoxProps & {
 
 const Member: FC<Props> = (props) => {
   const image = (
-    <Box maxW={400} mr={props.isImageRight ? 0 : 8}>
+    <Box
+      maxW={400}
+      mr={props.isImageRight ? 0 : 8}
+      borderRadius="16"
+      overflow="hidden"
+    >
       <GatsbyImage image={getImage(props.image)!} alt={props.title} />
     </Box>
   );

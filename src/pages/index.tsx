@@ -171,7 +171,7 @@ const Home: FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                 />
                 <Member
                   className="animate__animated animate__fadeInUp"
-                  image={data.mission?.childImageSharp?.gatsbyImageData!}
+                  image={data.mizuno?.childImageSharp?.gatsbyImageData!}
                   title="取締役"
                   name="水野宏明"
                   nameEn="Hiroaki Mizuno"
@@ -279,6 +279,18 @@ export const query = graphql`
           blurredOptions: { width: 100 }
           width: 600
           placeholder: BLURRED
+          aspectRatio: 1
+        )
+      }
+    }
+    mizuno: file(relativePath: { eq: "member/mizuno.jpg" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          blurredOptions: { width: 100 }
+          width: 600
+          placeholder: BLURRED
+          aspectRatio: 1
         )
       }
     }
