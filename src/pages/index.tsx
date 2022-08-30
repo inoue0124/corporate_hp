@@ -69,9 +69,9 @@ const Home: FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                 color="grey.900"
                 fontSize={36}
               >
-                ワクワクする未来を創る人材を
+                ワクワクする未来へ
                 <br />
-                キャリーする
+                時代をキャリーする
               </Text>
               <Spacer />
               <WaveForm h="60vh" />
@@ -95,8 +95,7 @@ const Home: FC<PageProps<GatsbyTypes.HomeQuery>> = ({ data }) => {
                       誰もがポテンシャルを発揮できる世の中を目指します。
                       <br />
                       <br />
-                      テクノロジー志向かつデータドリブンに変えていきます。
-                      アカデミックとビジネスの架け橋となり、
+                      キャリッジはアカデミックとビジネスの架け橋となり、
                       教育をテクノロジー志向かつデータドリブンに変えていきます。
                     </>
                   }
