@@ -34,8 +34,8 @@ export function PhilosophySection() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {pillars.map((pillar, i) => (
-            <ScrollReveal key={pillar.title} delay={i * 0.15}>
-              <div className="rounded-2xl border border-border bg-bg-card p-8 transition-colors hover:border-accent-purple/50">
+            <ScrollReveal key={pillar.title} delay={i * 0.15} className="h-full">
+              <div className="h-full rounded-2xl border border-border bg-bg-card p-8 transition-colors hover:border-accent-purple/50">
                 <div className="text-4xl">{pillar.icon}</div>
                 <h3 className="mt-4 text-xl font-bold">{pillar.title}</h3>
                 <p className="mt-3 leading-relaxed text-text-secondary">

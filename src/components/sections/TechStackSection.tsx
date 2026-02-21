@@ -12,20 +12,20 @@ export function TechStackSection() {
           <SectionHeading en="Tech Stack" ja="使ってる技術" />
         </ScrollReveal>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {categories.map((category, ci) => {
             const items = techStack.filter((t) => t.category === category);
             return (
-              <ScrollReveal key={category} delay={ci * 0.1}>
-                <div>
+              <ScrollReveal key={category} delay={ci * 0.05}>
+                <div className="rounded-2xl border border-border bg-bg-card p-6">
                   <h3 className="font-koho mb-3 text-sm font-semibold tracking-wider text-accent-purple">
                     {category}
                   </h3>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {items.map((item) => (
                       <span
                         key={item.name}
-                        className="rounded-lg border border-border bg-bg-card px-4 py-2 text-sm text-text-primary transition-colors hover:border-accent-purple/50"
+                        className="rounded-lg border border-border bg-bg-primary px-3 py-1.5 text-sm text-text-primary transition-colors hover:border-accent-purple/50"
                       >
                         {item.name}
                       </span>

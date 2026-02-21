@@ -24,10 +24,10 @@ export function ContactSection() {
         <ScrollReveal delay={0.2}>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button
-              href="mailto:info@carri-age.com"
+              href="/contact"
               size="lg"
             >
-              メールで相談する →
+              相談フォームへ →
             </Button>
           </div>
         </ScrollReveal>

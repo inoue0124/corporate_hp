@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -8,6 +9,7 @@ const navLinks = [
   { href: '#philosophy', label: 'Philosophy' },
   { href: '#service', label: 'Service' },
   { href: '#works', label: 'Works' },
+  { href: '/flow', label: 'Flow', isPage: true },
   { href: '#team', label: 'Team' },
   { href: '#company', label: 'Company' },
   { href: '#contact', label: 'Contact' },
@@ -15,20 +17,31 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTopPage, setIsTopPage] = useState(true);
+
+  useEffect(() => {
+    setIsTopPage(window.location.pathname === '/');
+  }, []);
+
+  const getHref = (link: (typeof navLinks)[number]) => {
+    if (link.isPage) return link.href;
+    if (isTopPage) return link.href;
+    return `/${link.href}`;
+  };
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border bg-bg-primary/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <a href="#" className="font-koho text-xl font-bold text-text-primary">
+        <Link href="/" className="font-koho text-xl font-bold text-text-primary">
           Carriage
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden gap-8 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={getHref(link)}
               className="font-koho text-sm text-text-secondary transition-colors hover:text-accent-purple"
             >
               {link.label}
@@ -77,7 +90,7 @@ export function Header() {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={getHref(link)}
                   onClick={() => setIsOpen(false)}
                   className="font-koho text-lg text-text-secondary transition-colors hover:text-accent-purple"
                 >
