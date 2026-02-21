@@ -97,6 +97,14 @@ export function ServiceSection() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.3}>
+          <div className="mt-10 text-center">
+            <Button href="/service" variant="secondary">
+              詳しく見る →
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

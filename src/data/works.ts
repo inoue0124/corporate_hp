@@ -10,36 +10,43 @@ export const works: Work[] = [
   {
     title: 'ヨミツギ',
     description:
-      'AIが物語の「続き」を生成する、インタラクティブ読書体験アプリ。読者の選択で物語が分岐する新しい読書のカタチ。',
-    tags: ['Next.js', 'OpenAI', 'Supabase'],
+      '本のマーケットプレイスアプリ。ユーザー間で本を売買できるプラットフォーム。Stripe決済連携で安全な取引を実現。',
+    tags: ['Next.js', 'Expo', 'Supabase', 'Stripe'],
     type: 'own',
   },
   {
     title: 'ツンドク',
     description:
-      'AIが積読を解消する読書管理アプリ。本の要約・読書プラン生成で、積読ゼロを目指す。',
-    tags: ['React Native', 'Claude API', 'Firebase'],
+      '読書管理・積読解消アプリ。読書記録の管理、積読リストの可視化で読書習慣をサポート。',
+    tags: ['Expo', 'Supabase', 'React Native'],
     type: 'own',
-  },
-  {
-    title: 'AURORA',
-    description:
-      'クリエイター向けポートフォリオ自動生成SaaS。SNSやGitHubの情報からAIがポートフォリオを自動作成。',
-    tags: ['Next.js', 'TypeScript', 'OpenAI'],
-    type: 'client',
   },
   {
     title: 'Practas',
     description:
-      '実践型プログラミング学習プラットフォーム。AIメンターがリアルタイムでコードレビュー・アドバイス。',
-    tags: ['React', 'Python', 'AWS'],
+      '実践型トレーニングアプリ。トレーニングメニューの管理・記録をアプリで完結。React管理画面でコンテンツ管理。',
+    tags: ['Flutter', 'Firebase', 'React'],
     type: 'client',
   },
   {
-    title: 'Strasj',
+    title: '語学学習プラットフォーム',
     description:
-      'AI搭載の戦略立案ツール。市場分析・競合調査をAIが自動化し、意思決定をサポート。',
-    tags: ['Next.js', 'LangChain', 'GCP'],
+      'AI音声認識を活用した語学学習プラットフォーム。Google Cloud Speech APIで発音チェック、LINE連携で学習リマインド。',
+    tags: ['Next.js', 'Supabase', 'Google Cloud', 'LINE API'],
+    type: 'client',
+  },
+  {
+    title: 'リハビリAIシステム',
+    description:
+      'AI搭載のリハビリ支援システム。患者データの分析・リハビリプランの自動提案で医療現場をサポート。',
+    tags: ['React', 'FastAPI', 'PostgreSQL', 'Azure', 'Dify'],
+    type: 'client',
+  },
+  {
+    title: 'Voice2SOAP',
+    description:
+      '音声からSOAPカルテを自動生成する医療記録支援システム。MFA認証でセキュアな環境を提供。',
+    tags: ['React', 'Firebase', 'MFA認証'],
     type: 'client',
   },
 ];
