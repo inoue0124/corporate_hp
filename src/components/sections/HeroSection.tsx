@@ -5,16 +5,8 @@ import { Button } from '@/components/ui/Button';
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Geometric background */}
-      <div className="absolute inset-0">
-        <div className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-accent-purple/5 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-accent-yellow/5 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rotate-45 border border-border/30" />
-        <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rotate-12 rounded-full border border-border/20" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <section className="relative flex min-h-screen items-center justify-center bg-bg-secondary">
+      <div className="mx-auto max-w-4xl px-4 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

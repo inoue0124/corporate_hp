@@ -20,7 +20,7 @@ export function TeamSection() {
               delay={i * 0.2}
               direction={i === 0 ? 'left' : 'right'}
             >
-              <div className="flex flex-col items-center gap-6 rounded-2xl border border-border bg-bg-card p-8 md:flex-row md:items-start">
+              <div className="flex flex-col items-center gap-6 rounded-2xl border border-border bg-bg-card p-8 shadow-sm md:flex-row md:items-start">
                 <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-full border-2 border-accent-purple/30">
                   <Image
                     src={member.image}

@@ -48,7 +48,7 @@ export function WorksSection() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((work, i) => (
             <ScrollReveal key={work.title} delay={i * 0.1}>
-              <div className="group rounded-2xl border border-border bg-bg-card p-6 transition-all hover:border-accent-purple/50 hover:-translate-y-1">
+              <div className="group rounded-2xl border border-border bg-bg-card p-6 shadow-sm transition-all hover:border-accent-purple/50 hover:-translate-y-1">
                 <div className="mb-4 flex h-40 items-center justify-center rounded-lg bg-bg-secondary">
                   <span className="text-4xl font-bold text-text-secondary/30">
                     {work.title.charAt(0)}

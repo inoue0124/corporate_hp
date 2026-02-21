@@ -5,16 +5,16 @@ import { Button } from '@/components/ui/Button';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-32">
+    <section id="contact" className="bg-gradient-to-br from-slate-900 to-indigo-950 py-20 md:py-32">
       <div className="mx-auto max-w-3xl px-4 text-center">
         <ScrollReveal>
-          <p className="font-koho text-sm tracking-widest text-accent-purple">
+          <p className="font-koho text-sm tracking-widest text-indigo-300">
             Contact
           </p>
-          <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold text-white md:text-5xl">
             まずは壁打ちから。
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-text-secondary">
+          <p className="mx-auto mt-4 max-w-xl text-slate-300">
             「こんなの作れる？」「予算感を知りたい」「AIで何ができる？」
             <br />
             カジュアルにお話しましょう。
@@ -33,7 +33,7 @@ export function ContactSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <p className="mt-6 text-sm text-text-secondary">
+          <p className="mt-6 text-sm text-slate-400">
             info@carri-age.com
           </p>
         </ScrollReveal>

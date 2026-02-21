@@ -55,7 +55,7 @@ export function ServiceSection() {
           {plans.map((plan, i) => (
             <ScrollReveal key={plan.name} delay={i * 0.15}>
               <div
-                className={`relative rounded-2xl border p-8 transition-colors ${
+                className={`relative rounded-2xl border p-8 shadow-sm transition-colors ${
                   plan.highlighted
                     ? 'border-accent-purple bg-accent-purple/5'
                     : 'border-border bg-bg-card hover:border-accent-purple/50'

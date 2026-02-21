@@ -130,7 +130,7 @@ export default function ContactPage() {
                   value={form.company}
                   onChange={handleChange}
                   placeholder="キャリッジ株式会社"
-                  className="mt-2 w-full rounded-lg border border-border bg-bg-primary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-border bg-bg-secondary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
                 />
               </div>
 
@@ -153,7 +153,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   placeholder="山田 太郎"
-                  className="mt-2 w-full rounded-lg border border-border bg-bg-primary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-border bg-bg-secondary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
                 />
               </div>
 
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   placeholder="you@example.com"
-                  className="mt-2 w-full rounded-lg border border-border bg-bg-primary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-border bg-bg-secondary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
                 />
               </div>
 
@@ -196,7 +196,7 @@ export default function ContactPage() {
                   name="category"
                   value={form.category}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-lg border border-border bg-bg-primary px-4 py-3 text-sm text-text-primary focus:border-accent-purple focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-border bg-bg-secondary px-4 py-3 text-sm text-text-primary focus:border-accent-purple focus:outline-none"
                 >
                   <option value="">選択してください</option>
                   {categories.map((cat) => (
@@ -226,7 +226,7 @@ export default function ContactPage() {
                   required
                   rows={6}
                   placeholder="お気軽にご記入ください"
-                  className="mt-2 w-full resize-y rounded-lg border border-border bg-bg-primary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
+                  className="mt-2 w-full resize-y rounded-lg border border-border bg-bg-secondary px-4 py-3 text-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent-purple focus:outline-none"
                 />
               </div>
 
