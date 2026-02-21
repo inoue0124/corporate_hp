@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:I[5208,["125","static/chunks/125-86fad2bcb24e0bca.js","909","static/chunks/909-aed3aa549e59d0fb.js","619","static/chunks/619-ba102abea3e3d0e4.js","177","static/chunks/app/layout-8d89f1a4f45d8da0.js"],"Header"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","345","static/chunks/app/not-found-560ef01988659d86.js"],""]
+6:I[1959,[],"ClientPageRoot"]
+7:I[1871,["125","static/chunks/125-86fad2bcb24e0bca.js","977","static/chunks/app/contact/page-b09541bee12cce6f.js"],"default"]
+a:I[4431,[],"OutletBoundary"]
+c:I[5278,[],"AsyncMetadataOutlet"]
+e:I[4431,[],"ViewportBoundary"]
+10:I[4431,[],"MetadataBoundary"]
+11:"$Sreact.suspense"
+13:I[7150,[],""]
+:HL["/_next/static/media/0809195482b09546-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/0c7fc12dc6bcfa5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/cf5f6f7c9bde1527-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/f3a8159a6e62866b.css","style"]
+:HL["/_next/static/css/2bd78c87a8e553ea.css","style"]
+:HL["/_next/static/css/e6e5e25cfc690063.css","style"]
+0:{"P":null,"b":"AvBPFoVV2PV7a7a3Qd-te","p":"","c":["","contact"],"i":false,"f":[[["",{"children":["contact",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f3a8159a6e62866b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2bd78c87a8e553ea.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/e6e5e25cfc690063.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ja","className":"__variable_d7226a __variable_266483","children":["$","body",null,{"className":"font-noto antialiased","children":[["$","$L2",null,{}],["$","main",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-4 text-center","children":[["$","h1",null,{"className":"font-koho bg-gradient-to-r from-accent-purple to-accent-yellow bg-clip-text text-8xl font-bold text-transparent","children":"404"}],["$","p",null,{"className":"mt-4 text-xl text-text-secondary","children":"ページが見つかりません"}],["$","$L5",null,{"href":"/","className":"mt-8 inline-flex items-center rounded-full bg-accent-purple px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-purple/80","children":"トップに戻る →"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-border bg-bg-secondary py-8","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 text-center","children":[["$","p",null,{"className":"font-koho text-lg font-bold text-text-primary","children":"Carriage Inc."}],["$","p",null,{"className":"mt-2 text-sm text-text-secondary","children":["© ",2026," キャリッジ株式会社"]}]]}]}]]}]}]]}],{"children":["contact",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L6",null,{"Component":"$7","searchParams":{},"params":{},"promises":["$@8","$@9"]}],null,["$","$La",null,{"children":["$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L10",null,{"children":["$","div",null,{"hidden":true,"children":["$","$11",null,{"fallback":null,"children":"$L12"}]}]}]]}],false]],"m":"$undefined","G":["$13",[]],"s":false,"S":true}
+8:{}
+9:"$0:f:0:1:2:children:2:children:1:props:children:0:props:params"
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+d:{"metadata":[["$","title","0",{"children":"キャリッジ株式会社 | AI×オフショアで、速く安く。"}],["$","meta","1",{"name":"description","content":"AI×オフショア開発で、高品質なMVP開発を150万円から。キャリッジ株式会社はAIを使い倒すスタートアップです。"}],["$","meta","2",{"property":"og:title","content":"キャリッジ株式会社 | AI×オフショアで、速く安く。"}],["$","meta","3",{"property":"og:description","content":"AI×オフショア開発で、高品質なMVP開発を150万円から。キャリッジ株式会社はAIを使い倒すスタートアップです。"}],["$","meta","4",{"property":"og:url","content":"https://www.carri-age.com"}],["$","meta","5",{"property":"og:site_name","content":"キャリッジ株式会社"}],["$","meta","6",{"property":"og:locale","content":"ja_JP"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary"}],["$","meta","9",{"name":"twitter:title","content":"キャリッジ株式会社 | AI×オフショアで、速く安く。"}],["$","meta","10",{"name":"twitter:description","content":"AI×オフショア開発で、高品質なMVP開発を150万円から。キャリッジ株式会社はAIを使い倒すスタートアップです。"}]],"error":null,"digest":"$undefined"}
+12:"$d:metadata"
