@@ -72,12 +72,12 @@ export default function FlowPage() {
               <ScrollReveal key={step.number} delay={i * 0.1}>
                 <div className="relative flex gap-6 md:gap-8">
                   {/* Icon circle */}
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent-purple bg-bg-primary text-xl">
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent-purple bg-white text-xl">
                     {step.icon}
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 rounded-2xl border border-border bg-bg-card p-6">
+                  <div className="flex-1 rounded-2xl border border-border bg-bg-card p-6 shadow-sm">
                     <div className="flex flex-wrap items-center gap-3">
                       <span className="font-koho text-sm font-bold text-accent-purple">
                         STEP {step.number}
