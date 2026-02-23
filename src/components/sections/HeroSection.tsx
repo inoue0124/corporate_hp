@@ -2,11 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
+import { WaveScene } from '@/components/three/WaveScene';
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center bg-bg-secondary">
-      <div className="mx-auto max-w-4xl px-4 text-center">
+    <section className="relative flex min-h-screen items-center justify-center bg-bg-secondary overflow-hidden">
+      <WaveScene />
+      <div className="relative z-10 mx-auto max-w-4xl rounded-3xl bg-white/60 px-8 py-12 text-center backdrop-blur-md md:px-16">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,9 +24,9 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl"
         >
-          AI、
+          AI×開発で、
           <br className="md:hidden" />
-          使い倒してます。
+          圧倒的に速く。
         </motion.h1>
 
         <motion.p
