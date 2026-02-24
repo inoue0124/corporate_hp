@@ -8,6 +8,8 @@ import * as THREE from 'three';
 /* ── Wave Mesh ─────────────────────────────────────────────── */
 
 const waveVertexShader = /* glsl */ `
+  uniform float uAmplitude;
+  uniform float uWaveLength;
   uniform float uTime;
   varying vec2 vUv;
   varying float vElevation;
@@ -16,13 +18,8 @@ const waveVertexShader = /* glsl */ `
     vUv = uv;
     vec3 pos = position;
 
-    // Layered waves for organic flowing motion
-    float wave1 = sin(pos.x * 0.4 + uTime * 0.3) * 1.2;
-    float wave2 = sin(pos.x * 0.2 + pos.y * 0.3 + uTime * 0.2) * 0.8;
-    float wave3 = cos(pos.y * 0.3 + uTime * 0.25) * 0.6;
-    float wave4 = sin(pos.x * 0.8 + pos.y * 0.5 + uTime * 0.4) * 0.3;
-
-    pos.z = wave1 + wave2 + wave3 + wave4;
+    float wave = sin(pos.x * uWaveLength + uTime / 2.0) * uAmplitude;
+    pos.z = wave * pos.y * (0.15 * (cos(uTime) + 1.0) + 0.7) / 20.0;
     vElevation = pos.z;
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
@@ -41,7 +38,7 @@ const waveFragmentShader = /* glsl */ `
     vec3 lavender = vec3(0.655, 0.545, 0.980);
 
     // Gradient based on UV + elevation for more variation
-    float grad = vUv.x * 0.5 + vUv.y * 0.3 + (vElevation + 3.0) / 6.0 * 0.2;
+    float grad = vUv.x * 0.5 + vUv.y * 0.3 + (vElevation + 1.0) / 2.0 * 0.2;
     grad += sin(uTime * 0.15) * 0.05;
 
     vec3 color = mix(indigo, purple, smoothstep(0.2, 0.5, grad));
@@ -58,21 +55,25 @@ const waveFragmentShader = /* glsl */ `
 function WaveMesh() {
   const meshRef = useRef<THREE.Mesh>(null);
   const uniforms = useMemo(
-    () => ({ uTime: { value: 0 } }),
+    () => ({
+      uTime: { value: 0 },
+      uAmplitude: { value: 3.8 },
+      uWaveLength: { value: 1.0 },
+    }),
     [],
   );
 
-  useFrame(({ clock }) => {
-    uniforms.uTime.value = clock.getElapsedTime();
+  useFrame(() => {
+    uniforms.uTime.value += 0.01;
   });
 
   return (
     <mesh
       ref={meshRef}
-      rotation={[-Math.PI / 2.6, 0.15, -0.3]}
-      position={[0, -0.5, -2]}
+      rotation={[1.4, -0.2, -0.6]}
+      position={[0, 0, 0]}
     >
-      <planeGeometry args={[22, 18, 200, 200]} />
+      <planeGeometry args={[20, 10, 100, 100]} />
       <shaderMaterial
         vertexShader={waveVertexShader}
         fragmentShader={waveFragmentShader}
@@ -129,12 +130,12 @@ export function WaveScene() {
       <Canvas
         dpr={[1, 1.5]}
         frameloop="always"
-        camera={{ position: [0, 3, 6], fov: 60 }}
+        orthographic
+        camera={{ zoom: 250, position: [0, 0, 0] }}
         gl={{ alpha: true, antialias: true }}
         style={{ background: 'transparent' }}
       >
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={0.3} />
+        <ambientLight />
         <WaveMesh />
         <FloatingParticles />
       </Canvas>
